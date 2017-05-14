@@ -368,11 +368,11 @@ select {
 .main_slider__links_wrap > a { color: #fff; text-transform: none; font-size: 22px; text-transform: uppercase;}
 .main_slider__links_wrap > a:hover { text-decoration: underline; }
 
-.main_slider__desc_wrap .top .title{ transform: translateX(-200%); transition: all 0 ease; }
-.item.active .main_slider__desc_wrap .top .title { transform: translateX(0); transition: all 0.3s ease;  }
+.main_slider__desc_wrap .top .title{ transform: translateX(-200%); transition: all 0.1s ease 0; }
+.item.active .main_slider__desc_wrap .top .title { transform: translateX(0); transition: all 0.45s ease 0;  }
 
-.main_slider__desc_wrap .top .desc { transform: translateX(-200%); transition: all 0 ease 0.2s; }
-.item.active .main_slider__desc_wrap .top .desc { transform: translateX(0); transition: all 0.3s ease 0.3s; }
+.main_slider__desc_wrap .top .desc { transform: translateX(-200%); transition: all 0.1s ease 0; }
+.item.active .main_slider__desc_wrap .top .desc { transform: translateX(0); transition: all 0.45s ease 0.2s; }
 
 
 .about { padding: 50px 0; box-shadow: 0 -2px 2px #bebdbe; }
