@@ -11,14 +11,43 @@ $(function(){ //плавный скролл к якорям
 
 
 $(function(){
-
 	baguetteBox.run('.baguetteBox');
 
 	$('#main_slider').carousel({interval: 4000});
 	$('#slave_slider').carousel({interval: 4000});
+
+	$('#about').viewportChecker({
+		offset: 0,
+		callbackFunction: function(el) {
+			el.removeClass('opacity')
+		}
+	});
 });
 
 
+
+
+/*  Parallax  */
+$(function(){
+	$('.concept').each(function(){
+		var obj = $(this),
+			img1_offset = obj.find('.concept__img:first-of-type').offset().top,
+			img2_offset = obj.find('.concept__img:last-of-type').offset().top;
+
+		$(window).scroll(function(e){
+			parallax(obj, img1_offset, img2_offset);
+		});
+	});
+})
+function parallax(obj, img1_offset, img2_offset){
+	var scrolltop = $(window).scrollTop();
+
+	scrolltop += 300;
+
+	obj.find('.concept__img:first-of-type').css({'transform': 'translate3d(0, '+(img1_offset - scrolltop)/10+'px, 0)'});	
+	obj.find('.concept__img:last-of-type').css({'transform': 'translate3d(0, '+(img2_offset - scrolltop)/6+'px, 0)'});	
+}
+/*  /Parallax  */
 
 
 
