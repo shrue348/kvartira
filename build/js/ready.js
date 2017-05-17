@@ -5,9 +5,20 @@ $(function(){ //плавный скролл к якорям
 		var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
 		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 400);
+
 		return false;
     });
 });
+
+$(function(){
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	 	var elementClick = $(this).attr("href")
+		var destination = $(elementClick).offset().top;
+		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 400);
+
+		return false;
+	})
+})
 
 
 $(function(){
@@ -16,14 +27,21 @@ $(function(){
 	$('#main_slider').carousel({interval: 4000});
 	$('#slave_slider').carousel({interval: 4000});
 
-	$('#about').viewportChecker({
+
+	$('#about').viewportChecker({ 
 		offset: 0,
 		callbackFunction: function(el) {
 			el.removeClass('opacity')
 		}
 	});
-});
 
+	$('.img_txt').viewportChecker({ 
+		offset: 300,
+		callbackFunction: function(el) {
+			el.removeClass('opacity')
+		}
+	});
+});
 
 
 

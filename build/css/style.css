@@ -395,7 +395,10 @@ select {
 .apartaments_row { width: 668px; margin: 0 auto; text-align: center; font-size: 21px;}
 .apartaments_row > .row { margin-left: -22px; margin-right: -22px; }
 .apartaments_row > .row > .col-4 { padding: 0 22px;  }
-.apartaments_row .top { border: 4px solid #fff; font-size: 87px; height: 185px; line-height: 185px; box-sizing: border-box; font-family: "MyriadProBold"; margin-bottom: 5px;}
+.apartaments_row a { color: #fff; text-decoration: none;}
+.apartaments_row .top { font-size: 87px; height: 185px; line-height: 185px; box-sizing: border-box; font-family: "MyriadProBold"; margin-bottom: 5px; position: relative;}
+.apartaments_row .top:after { position: absolute; content: ''; margin: auto; top: 0; right: 0; bottom: 0; left: 0; border: 4px solid #fff; transition: all 0.2s ease;}
+.apartaments_row a:hover .top:after { border: 7px solid #fff;}
 
 
 
@@ -407,7 +410,8 @@ select {
 .slave_slider .icons > .col-3{ font-size: 12px; text-transform: uppercase;}
 
 
-.img_txt { padding: 60px 0;}
+.img_txt { padding: 60px 0; transition: all 0.7s ease;}
+.img_txt.opacity { -webkit-transform: translateX(-1000px); transform: translateX(-1000px);}
 .img_txt .col-6 { vertical-align: middle; }
 .img_txt .block_header { text-align: left; line-height: 1;}
 
@@ -417,7 +421,17 @@ select {
 .access_wrap { margin: 0 auto 30px; width: 910px;}
 .access_wrap .col-4 { padding: 0 25px; }
 .access .txt { text-align: center; }
+.access_item { position: relative; }
+.access_item:before { position: absolute; z-index: 1; margin: auto; top: 0; right: 0; bottom: 0; left: 0; content: ''; background-color: #8f8989; opacity: 0.6; transition: opacity 0.3s ease; }
+.access_item:after { position: absolute; z-index: 2; text-align: center; bottom: 31%; margin: auto; left: 0; right: 0;}
+
+.access .col-4:nth-child(1) .access_item:after { content: url(../img/access_1_ico.png);}
+.access .col-4:nth-child(2) .access_item:after { content: url(../img/access_2_ico.png);}
+.access .col-4:nth-child(3) .access_item:after { content: url(../img/access_3_ico.png);}
+
 .access_item img { display: block; line-height: 1; }
+
+.access_item:hover:before { opacity: 0;}
 
 
 .build { padding: 60px 0; margin-bottom: 50px;}
@@ -451,28 +465,14 @@ select {
 
 
 
-.fade {
-  opacity: 0;
-  transition: opacity .15s linear;
-}
-.fade.in {
-  opacity: 1;
-}
-.collapse {
-  display: none;
-}
-.collapse.in {
-  display: block;
-}
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition-timing-function: ease;
-  transition-duration: .35s;
-  transition-property: height, visibility;
-}
+.fade { opacity: 0; transition: opacity .15s linear;}
+.fade.in { opacity: 1;}
+.collapse { display: none;}
+.collapse.in { display: block;}
+.collapsing { position: relative; height: 0; overflow: hidden; transition-timing-function: ease; transition-duration: .35s; transition-property: height, visibility;}
 
+.tab-content > .tab-pane, .pill-content > .pill-pane { display: none;}
+.tab-content > .active, .pill-content > .active { display: block;}
 
 /*-----Carousel------*/
 .carousel {  position: relative;}
@@ -481,8 +481,7 @@ select {
 .carousel-inner {  position: relative;  width: 100%;  overflow: hidden;}
 .carousel-inner > .item {
   position: relative;
-  display: none;
-  transition: .35s ease-in left ,opacity 0.5s linear;
+  display: none; transition: .35s ease-in left ,opacity 0.5s linear;
 }
 .carousel-inner > .active,
 .carousel-inner > .next,

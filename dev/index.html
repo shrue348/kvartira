@@ -16,8 +16,6 @@
 	<script src="js/viewportchecker.js"></script>
 	<script src="js/ready.js"></script>
 	
-
-
 </head>
 <body>
 	<section class="main_slider">
@@ -135,19 +133,25 @@
 			<div class="apartaments_wrap">
 				<div class="block_header">Апартаменты</div>
 
-				<div class="apartaments_row">
+				<div class="apartaments_row ">
 					<div class="row">
 						<div class="col-4">
-							<div class="top">1</div>
-							1 комнатная
+							<a href="#room1" class="scrollto">
+								<div class="top">1</div>
+								1 комнатная
+							</a>
 						</div>
 						<div class="col-4">
-							<div class="top">2</div>
-							2 комнатная
+							<a href="#room2" class="scrollto">
+								<div class="top">2</div>
+								2 комнатная
+							</a>
 						</div>
 						<div class="col-4">
-							<div class="top">3</div>
-							3 комнатные
+							<a href="#room3" class="scrollto">
+								<div class="top">3</div>
+								3 комнатные
+							</a>
 						</div>
 					</div>
 				</div>
@@ -161,77 +165,101 @@
 
 	<section class="slave_slider">
 		<div class="wrapper">
-			<div id="slave_slider" class="carousel slide" >
-				<div class="carousel-inner ">
-					<div class="item active">
-						<div class="row fluid">
-							<div class="col-6">
-								<img src="img/plan.png" alt="">
-							</div>
-							<div class="col-6 aligncenter">
-								<div class="block_header">Однокомнатные апартаменты</div>
-
-								<div class="icons row fluid">
-									<div class="col-3">
-										<img src="img/ico1.png" alt="Большой санузел"><br>
-										Большой <br>санузел
-									</div>
-									<div class="col-3">
-										<img src="img/ico2.png" alt="Удобная зона кухни"><br>
-										Удобная <br>зона кухни
-									</div>
-									<div class="col-3">
-										<img src="img/ico3.png" alt="Выделенная спальня"><br>
-										Выделенная <br>спальня
-									</div>
-									<div class="col-3">
-										<img src="img/ico4.png" alt="Большой балкон"><br>
-										Большой <br>балкон
-									</div>
-								</div>
-							</div>
-						</div>
+		
+			<div class="item" id="room1">
+				<div class="row fluid">
+					<div class="col-6">
+						<img src="img/plan.png" alt="">
 					</div>
+					<div class="col-6 aligncenter">
+						<div class="block_header">Однокомнатные апартаменты</div>
 
-					<div class="item">
-						<div class="row fluid">
-							<div class="col-6">
-								<img src="img/plan.png" alt="">
+						<div class="icons row fluid">
+							<div class="col-3">
+								<img src="img/ico1.png" alt="Большой санузел"><br>
+								Большой <br>санузел
 							</div>
-							<div class="col-6 aligncenter">
-								<div class="block_header">Однокомнатные апартаменты</div>
-
-								<div class="icons row fluid">
-									<div class="col-3">
-										<img src="img/ico1.png" alt="Большой санузел"><br>
-										Большой <br>санузел
-									</div>
-									<div class="col-3">
-										<img src="img/ico2.png" alt="Удобная зона кухни"><br>
-										Удобная <br>зона кухни
-									</div>
-									<div class="col-3">
-										<img src="img/ico3.png" alt="Выделенная спальня"><br>
-										Выделенная <br>спальня
-									</div>
-									<div class="col-3">
-										<img src="img/ico4.png" alt="Большой балкон"><br>
-										Большой <br>балкон
-									</div>
-								</div>
+							<div class="col-3">
+								<img src="img/ico2.png" alt="Удобная зона кухни"><br>
+								Удобная <br>зона кухни
+							</div>
+							<div class="col-3">
+								<img src="img/ico3.png" alt="Выделенная спальня"><br>
+								Выделенная <br>спальня
+							</div>
+							<div class="col-3">
+								<img src="img/ico4.png" alt="Большой балкон"><br>
+								Большой <br>балкон
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<a class="left carousel-control" href="#slave_slider" role="button" data-slide="prev"></a>
-				<a class="right carousel-control" href="#slave_slider" role="button" data-slide="next"></a>
+			<div class="item" id="room2">
+				<div class="row fluid">
+					<div class="col-6">
+						<img src="img/plan.png" alt="">
+					</div>
+					<div class="col-6 aligncenter">
+						<div class="block_header">Двухкомнатные апартаменты</div>
+
+						<div class="icons row fluid">
+							<div class="col-3">
+								<img src="img/ico1.png" alt="Большой санузел"><br>
+								Большой <br>санузел
+							</div>
+							<div class="col-3">
+								<img src="img/ico2.png" alt="Удобная зона кухни"><br>
+								Удобная <br>зона кухни
+							</div>
+							<div class="col-3">
+								<img src="img/ico3.png" alt="Выделенная спальня"><br>
+								Выделенная <br>спальня
+							</div>
+							<div class="col-3">
+								<img src="img/ico4.png" alt="Большой балкон"><br>
+								Большой <br>балкон
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="item" id="room3">
+				<div class="row fluid">
+					<div class="col-6">
+						<img src="img/plan.png" alt="">
+					</div>
+					<div class="col-6 aligncenter">
+						<div class="block_header">Трехкомнатные апартаменты</div>
+
+						<div class="icons row fluid">
+							<div class="col-3">
+								<img src="img/ico1.png" alt="Большой санузел"><br>
+								Большой <br>санузел
+							</div>
+							<div class="col-3">
+								<img src="img/ico2.png" alt="Удобная зона кухни"><br>
+								Удобная <br>зона кухни
+							</div>
+							<div class="col-3">
+								<img src="img/ico3.png" alt="Выделенная спальня"><br>
+								Выделенная <br>спальня
+							</div>
+							<div class="col-3">
+								<img src="img/ico4.png" alt="Большой балкон"><br>
+								Большой <br>балкон
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
 
-	<section class="img_txt">
+	<section class="img_txt opacity">
 		<div class="wrapper">
 			<div class="row fluid">
 				<div class="col-6">
@@ -247,7 +275,7 @@
 		</div>
 	</section>
 
-	<section class="img_txt">
+	<section class="img_txt opacity">
 		<div class="wrapper">
 			<div class="row fluid">
 				<div class="col-6">

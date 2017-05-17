@@ -16,6 +16,8 @@
 	<script src="js/viewportchecker.js"></script>
 	<script src="js/ready.js"></script>
 	
+
+
 </head>
 <body>
 	<section class="main_slider">
@@ -133,22 +135,22 @@
 			<div class="apartaments_wrap">
 				<div class="block_header">Апартаменты</div>
 
-				<div class="apartaments_row ">
+				<div class="apartaments_row nav nav-tabs">
 					<div class="row">
 						<div class="col-4">
-							<a href="#room1" class="scrollto">
+							<a href="#room1" data-toggle="tab" >
 								<div class="top">1</div>
 								1 комнатная
 							</a>
 						</div>
 						<div class="col-4">
-							<a href="#room2" class="scrollto">
+							<a href="#room2" data-toggle="tab" >
 								<div class="top">2</div>
 								2 комнатная
 							</a>
 						</div>
 						<div class="col-4">
-							<a href="#room3" class="scrollto">
+							<a href="#room3" data-toggle="tab" >
 								<div class="top">3</div>
 								3 комнатные
 							</a>
@@ -164,9 +166,9 @@
 
 
 	<section class="slave_slider">
-		<div class="wrapper">
+		<div class="wrapper tab-content">
 		
-			<div class="item" id="room1">
+			<div class="item tab-pane fade in active" id="room1">
 				<div class="row fluid">
 					<div class="col-6">
 						<img src="img/plan.png" alt="">
@@ -196,7 +198,7 @@
 				</div>
 			</div>
 
-			<div class="item" id="room2">
+			<div class="item tab-pane fade" id="room2">
 				<div class="row fluid">
 					<div class="col-6">
 						<img src="img/plan.png" alt="">
@@ -226,7 +228,7 @@
 				</div>
 			</div>
 		
-			<div class="item" id="room3">
+			<div class="item tab-pane fade" id="room3">
 				<div class="row fluid">
 					<div class="col-6">
 						<img src="img/plan.png" alt="">
