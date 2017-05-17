@@ -25,7 +25,9 @@ $(function(){
 	baguetteBox.run('.baguetteBox');
 
 	$('#main_slider').carousel({interval: 4000});
-	$('#slave_slider').carousel({interval: 4000});
+	$('#slave_slider_1').carousel({interval: 4000});
+	$('#slave_slider_2').carousel({interval: 4000});
+	$('#slave_slider_3').carousel({interval: 4000});
 
 
 	$('#about').viewportChecker({ 
