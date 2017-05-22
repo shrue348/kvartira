@@ -64,10 +64,37 @@ function parallax(obj, img1_offset, img2_offset){
 
 	scrolltop += 300;
 
-	obj.find('.concept__img:first-of-type').css({'transform': 'translate3d(0, '+(img1_offset - scrolltop)/10+'px, 0)'});	
-	obj.find('.concept__img:last-of-type').css({'transform': 'translate3d(0, '+(img2_offset - scrolltop)/6+'px, 0)'});	
+	
+	obj.find('.concept__img:first-of-type').css({'transform': 'translate3d(0, '+(img1_offset - scrolltop)/8+'px, 0)'});	
+	obj.find('.concept__img:last-of-type').css({'transform': 'translate3d(0, '+(img2_offset - scrolltop)/5+'px, 0)'});	
+	
+		
 }
+/* Parallax 2 */
+$(function(){
+	var obj = $('.apartaments_back'),
+		img1_offset = obj.offset().top,
+		scrolltop;
+
+	$(window).scroll(function(e){
+		scrolltop = $(window).scrollTop();
+		obj.css({'transform': 'translate3d(0, '+(-img1_offset + scrolltop)/6.5+'px, 0)'});
+	});
+});
 /*  /Parallax  */
+
+
+/*  Scroll  */
+(function($){
+    $(window).on("load",function(){
+        $(".img_txt__imgs").mCustomScrollbar({
+        	theme:"dark"
+        });
+    });
+})(jQuery);
+/*  /Scroll  */
+
+
 
 
 
