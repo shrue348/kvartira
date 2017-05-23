@@ -398,9 +398,9 @@ body:after {
 .concept__img { transition: all 0.1s linear; }
 
 
-.apartaments { padding: 190px 0 60px; position: relative;}
+.apartaments { padding: 0 0 60px; position: relative;}
 .apartaments_back { position: absolute; z-index: 0; background: url(../img/apartaments.jpg) no-repeat scroll top center transparent; height: 350px; margin: auto; left: 0; top: 170px; right: 0; transition: all 0s;}
-.apartaments_front { position: relative; z-index: 2; background-color: #fff;}
+.apartaments_front { position: relative; z-index: 2; background-color: #fff; min-height: 200px; padding: 20px 0;}
 .apartaments > .wrapper { max-width: 965px; }
 .apartaments_wrap { box-sizing: border-box; color: #fff; padding: 18px 0; background-color: rgba(143,137,137,0.6); margin-bottom: 45px; position: relative; z-index: 2;}
 .apartaments .block_header { margin-bottom: 34px; }
