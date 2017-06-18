@@ -8,12 +8,14 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/baguetteBox.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/baguetteBox.min.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/viewportchecker.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
 	<script src="js/ready.js"></script>
 	
 
@@ -25,7 +27,7 @@
 			<div id="main_slider" class="carousel fade" >
 				<div class="carousel-inner ">
 					<div class="item active">
-						<img src="img/_main_slider.png" alt="">
+						<img src="img/main_slider_1.jpg" alt="">
 
 						<div class="main_slider__desc_wrap">
 							<div class="top">
@@ -43,7 +45,43 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="img/_main_slider.png" alt="">
+						<img src="img/main_slider_2.jpg" alt="">
+
+						<div class="main_slider__desc_wrap">
+							<div class="top">
+								<div class="title">Апартаменты <br>на Петроградке</div>
+								<div class="desc">Современно. Удобно. <br>Близко</div>
+							</div>
+
+							<div class="location">УЛ. Большая Зеленинина, Д. 24, Лит. А <br>м. Чкаловская</div>
+						</div>
+
+						<div class="main_slider__links_wrap">
+							<a href="">Новости</a><br>
+							<a href="">Документы</a><br>
+							<a href="">Ход строительства</a>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/main_slider_3.jpg" alt="">
+
+						<div class="main_slider__desc_wrap">
+							<div class="top">
+								<div class="title">Апартаменты <br>на Петроградке</div>
+								<div class="desc">Современно. Удобно. <br>Близко</div>
+							</div>
+
+							<div class="location">УЛ. Большая Зеленинина, Д. 24, Лит. А <br>м. Чкаловская</div>
+						</div>
+
+						<div class="main_slider__links_wrap">
+							<a href="">Новости</a><br>
+							<a href="">Документы</a><br>
+							<a href="">Ход строительства</a>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/main_slider_4.jpg" alt="">
 
 						<div class="main_slider__desc_wrap">
 							<div class="top">
@@ -131,6 +169,9 @@
 
 
 	<section class="apartaments">
+		<div class="apartaments_back"></div>
+
+		
 		<div class="wrapper">
 			<div class="apartaments_wrap">
 				<div class="block_header">Апартаменты</div>
@@ -138,19 +179,19 @@
 				<div class="apartaments_row nav nav-tabs">
 					<div class="row">
 						<div class="col-4">
-							<a href="#room1" class="scrollto">
+							<a href="#room1" data-toggle="tab" >
 								<div class="top">1</div>
 								1 комнатная
 							</a>
 						</div>
 						<div class="col-4">
-							<a href="#room2" class="scrollto">
+							<a href="#room2" data-toggle="tab" >
 								<div class="top">2</div>
 								2 комнатная
 							</a>
 						</div>
 						<div class="col-4">
-							<a href="#room3" class="scrollto">
+							<a href="#room3" data-toggle="tab" >
 								<div class="top">3</div>
 								3 комнатные
 							</a>
@@ -158,17 +199,24 @@
 					</div>
 				</div>
 			</div>
-			<div class="txt">
-				<p>Широкий выбор планировочных решений однокомнатных, двухкомнатных и трехкомнатных апартаментов удовлетворит пожелания самых взыскательных клиентов. В вашем распоряжении комнаты площадью 12-32 кв. м, просторные кухни-гостиные площадью 23-58 кв. м, ванные комнаты площадью 1,8-8 кв. м и удобные прихожие – все помещения функционально продуманы. Эргономика помещений предполагает, что каждый метр будет задействован под нужды владельцев.</p>
+		</div>
+
+
+		<div class="apartaments_front">
+			<div class="wrapper">
+				<div class="txt">
+					<p>Широкий выбор планировочных решений однокомнатных, двухкомнатных и трехкомнатных апартаментов удовлетворит пожелания самых взыскательных клиентов. В вашем распоряжении комнаты площадью 12-32 кв. м, просторные кухни-гостиные площадью 23-58 кв. м, ванные комнаты площадью 1,8-8 кв. м и удобные прихожие – все помещения функционально продуманы. Эргономика помещений предполагает, что каждый метр будет задействован под нужды владельцев.</p>
+				</div>
 			</div>
 		</div>
+			
 	</section>
 
 
 	<section class="slave_slider">
-		<div class="wrapper ">
+		<div class="wrapper tab-content">
 		
-			<div class="slide_wrap" id="room1">
+			<div class="tab-pane fade in active" id="room1">
 				<div id="slave_slider_1" class="carousel slide" >
 					<div class="carousel-inner ">
 						<div class="item active">
@@ -237,7 +285,7 @@
 				</div>
 			</div>
 
-			<div class="slide_wrap" id="room2">
+			<div class="tab-pane fade" id="room2">
 				<div id="slave_slider_2" class="carousel slide" >
 					<div class="carousel-inner ">
 						<div class="item active">
@@ -306,7 +354,7 @@
 				</div>
 			</div>
 		
-			<div class="slide_wrap" id="room3">
+			<div class="tab-pane fade" id="room3">
 				<div id="slave_slider_3" class="carousel slide" >
 					<div class="carousel-inner ">
 						<div class="item active">
@@ -398,7 +446,18 @@
 		<div class="wrapper">
 			<div class="row fluid">
 				<div class="col-6">
-					<img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ">
+					<div class="img_txt__imgs baguetteBox">
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+						<a href="img/_interiors.png"><img src="img/_interiors.png" alt="ИНТЕРЬЕРЫ МЕСТ ОБЩЕГО ПОЛЬЗОВАНИЯ"></a>
+					</div>
 				</div>
 				<div class="col-6">
 					<div class="block_header">Интерьеры мест общего пользования</div>

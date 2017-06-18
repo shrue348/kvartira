@@ -85,17 +85,41 @@ $(function(){
 
 
 /*  Scroll  */
-(function($){
-    $(window).on("load",function(){
-        $(".img_txt__imgs").mCustomScrollbar({
-        	theme:"dark"
-        });
-    });
-})(jQuery);
+// (function($){
+//		$(window).on("load",function(){
+//		    $(".img_txt__imgs").mCustomScrollbar({
+//		    	theme:"dark"
+//		    });
+//		});
+// })(jQuery);
 /*  /Scroll  */
 
 
 
+
+/*  Random gallery  */
+(function($){
+    $.fn.cascadeMe = function() {
+        return this.each(function() {            
+            var $this = $(this);
+            var obj = $(this).children('span');
+            var arr = $.makeArray(obj);           
+            arr.sort(function() {return 0.5 - Math.random()});           
+            $this.empty().show();
+            arr.push("");
+            
+            var delay = 150;
+            
+            $.each(arr, function(i, val) {
+                $this.append(val);
+                $this.children('span').hide().fadeIn(500).delay(delay * i);
+            });
+        });
+    };
+})(jQuery);
+
+$('.img_txt__imgs').cascadeMe();
+/*  /Random gallery  */
 
 
 
