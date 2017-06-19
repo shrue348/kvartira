@@ -14,7 +14,7 @@ $(function(){
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	 	var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
-		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 400);
+		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-200}, 400);
 
 		return false;
 	})
@@ -84,39 +84,68 @@ $(function(){
 /*  /Parallax  */
 
 
-/*  Scroll  */
-// (function($){
-//		$(window).on("load",function(){
-//		    $(".img_txt__imgs").mCustomScrollbar({
-//		    	theme:"dark"
-//		    });
-//		});
-// })(jQuery);
-/*  /Scroll  */
-
-
-
 
 /*  Random gallery  */
-(function($){
+(function($){ //сортировка слайдов рандомно
     $.fn.cascadeMe = function() {
         return this.each(function() {            
             var $this = $(this);
-            var obj = $(this).children('span');
+            var obj = $(this).children('a');
             var arr = $.makeArray(obj);           
-            arr.sort(function() {return 0.5 - Math.random()});           
+            arr.sort(function() {return 0.5 - Math.random()});
+
+            obj.removeClass('fadeIn')       
             $this.empty().show();
             arr.push("");
             
             var delay = 150;
-            
+         
             $.each(arr, function(i, val) {
                 $this.append(val);
-                $this.children('span').hide().fadeIn(500).delay(delay * i);
+
             });
+           	bla()
         });
     };
 })(jQuery);
 
-$('.img_txt__imgs').cascadeMe();
+function bla(){ // появление 9 слайдов по порядку
+	var delay = 100;
+	var a = 1;
+	for (var i = 0; i < 9; i++) {
+		setTimeout(function() { 
+			$('.img_txt__imgs a:nth-child('+a+')').addClass('fadeIn');
+			console.log(a)
+			a++
+		}, delay * i);
+	}
+}
+
+$(function(){
+	bla(); // первое появление слайдов
+
+	var timerId = setInterval(function() { // запуск цикла сортировки слайдов
+	  $('.img_txt__imgs').cascadeMe();
+	}, 3000);
+})
 /*  /Random gallery  */
+
+
+
+/* Open slider in modal */
+
+$(function(){
+	$('.build_item').on('click', function(){
+		var obj = $(this),
+			gal_items = obj.find('.to_slider').html();
+
+		$('#modal_slider .carousel-inner').html(gal_items)
+		$('#modal_slider .carousel-inner .item:first').addClass('active');
+		$('#modal_slider').carousel();
+		$('#modal_gal').modal('show');
+	});
+
+	$('#modal_gal').on('hidden.bs.modal', function (e) {
+		$('#modal_slider .carousel-inner').empty();
+	})
+})
