@@ -151,3 +151,15 @@ $(function(){
 })
 
 
+
+$(function(){
+	$(".build_items").mCustomScrollbar({
+        axis: "x",
+        theme: "dark-thin",
+        autoExpandScrollbar: !0,
+        advanced: {
+            autoExpandHorizontalScroll: !0
+        }
+    })
+});
+

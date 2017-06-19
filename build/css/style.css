@@ -461,7 +461,7 @@ body:after {
 
 .build { padding: 50px 0; margin-bottom: 50px;}
 .build .block_header { margin-bottom: 50px; }
-.build_wrap { max-width: 1720px; margin: 0 auto;}
+.build_wrap { max-width: 1734px; margin: 0 auto;}
 .build_wrap .col-by5 { position: relative; padding: 0 2px;}
 .build_item { position: relative; overflow: hidden; display: block; transition: scale 0,4s ease;}
 .build_item:before { opacity: 0; content: ''; position: absolute; margin: auto; left: 0; background-color: rgba(143,137,137,0.6); transition: all 0.4s ease; width: 100%; height: 100%;}
@@ -471,6 +471,10 @@ body:after {
 .build_item:hover:before { opacity: 1; }
 .build_item:hover > .desc{ opacity: 1; }
 .build_item .to_slider { display: none;}
+
+
+.build_items { max-width: 100%; }
+.build_item__wrap { width: 344px; display: inline-block; }
 
 
 .contacts { position: relative;}
