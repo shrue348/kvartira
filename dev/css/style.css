@@ -331,11 +331,11 @@ select {
 .txt a { border-bottom: 3px solid #ed1c24; text-transform: uppercase; font-size: 12px; font-family: "RobotoBold"; letter-spacing: 1px;}
 
 .btn {
-    font-size: 24px;
+    font-size: 20px;
     border: 1px solid #fff;
     display: inline-block;
-    line-height: 46px;
-    height: 48px;
+    line-height: 42px;
+    height: 44px;
     color: #fff;
     border-radius: 30px;
     padding: 0 25px;
@@ -344,7 +344,9 @@ select {
     box-sizing: border-box;
     background-color: transparent;
     text-align: center;
-    background-color: #fff; color: #9D9999; border-color: #fff;
+    background-color: rgba(255,255,255,0.45); 
+    color: #fff; 
+    border-color: #fff;
 }
 .btn:hover { border-color: #fff; background-color: transparent; color: #fff;}
 .btn:active { -webkit-transform: translateY(2px); transform: translateY(2px);}
@@ -382,7 +384,10 @@ body:after {
 .main_slider img { display: block; line-height: 1;}
 .main_slider__desc_wrap { position: absolute; z-index: 2; margin: auto; top: 0; bottom: 0; left: 0; width: 495px; background-color: rgba(143,137,137,0.6); color: #fff;}
 .main_slider__desc_wrap .top { position: absolute; left: 73px; top: 235px; }
-.main_slider__desc_wrap .btn { position: absolute; left: 73px; bottom: 108px; }
+.main_slider__desc_wrap .btn { position: absolute; left: 73px; bottom: 168px; }
+.main_slider__desc_wrap .btn + .btn{ position: absolute; left: 73px; bottom: 108px; }
+
+
 .main_slider__desc_wrap .title { font-size: 40.6px; text-transform: uppercase; font-family: "MyriadProBold"; line-height: 1.2;}
 .main_slider__desc_wrap .desc { text-transform: uppercase; font-size: 16px;}
 .main_slider__desc_wrap .location { text-transform: uppercase; position: absolute; bottom: 25px; left: 73px; font-size: 22px; }
@@ -408,6 +413,14 @@ body:after {
 .concept__img:first-of-type { position: absolute; right: 323px; z-index: 2; top: 0; }
 .concept__img:last-of-type { position: absolute; right: 0; z-index: 1; top: 82px; }
 .concept__img { transition: all 0.1s linear; }
+
+
+.concept2 .concept__img:first-of-type { position: absolute; right: 323px; z-index: 2; top: 79px; }
+.concept2 .concept__img:last-of-type { position: absolute; right: 0; z-index: 1; top: 0; }
+.concept3 .concept__img:first-of-type { position: absolute; right: 323px; z-index: 2; top: 0; }
+.concept3 .concept__img:last-of-type { position: absolute; right: 0; z-index: 1; top: 79px; }
+.concept4 .concept__img:first-of-type { position: absolute; right: 296px; z-index: 2; top: 0; }
+.concept4 .concept__img:last-of-type { position: absolute; right: 0; z-index: 1; top: 66px; }
 
 
 .apartaments { padding: 50px 0 0; position: relative;}
@@ -465,6 +478,8 @@ body:after {
 .access_item img { display: block; line-height: 1; }
 .access_item:hover:before { opacity: 0;}
 
+.access_item__desc { position: absolute; margin: auto; left: 0; right: 0; bottom: 0; padding: 15px; text-align: center; color: #fff; z-index: 2;}
+
 
 .build { padding: 50px 0; margin-bottom: 50px;}
 .build .block_header { margin-bottom: 50px; }
@@ -494,9 +509,29 @@ body:after {
 
 
 
+
+
+
 #modal_slider img { display: block; line-height: 1;}
 #modal_slider .left.carousel-control { left: 5px;}
 #modal_slider .right.carousel-control { right: 5px;}
+
+
+
+
+#slave_slider_4 { position: relative; margin-bottom: 40px;}
+#slave_slider_4 .item { min-height: 367px;}
+#slave_slider_4 .carousel-indicators { position: absolute; max-width: 245px; background-color: #86898a; text-align-last: justify; text-align: justify; height: 3px; box-shadow: 0 0 1px #86898a; margin: auto; left: 0; right: 0; bottom: -35px;}
+#slave_slider_4 .carousel-indicators li { list-style: none; display: inline-block; position: relative; width: 11px; height: 11px; border-radius: 11px; position: relative; top: -10px;}
+#slave_slider_4 .carousel-indicators li.active {  background-color: #86898a; }
+#slave_slider_4 .carousel-indicators li:first-child { left: -3px;}
+#slave_slider_4 .carousel-indicators li:last-child { right: -3px;}
+
+
+#slave_slider_4 .carousel-indicators li:before { position: absolute; font-size: 16px; text-transform: uppercase; color: #86898a; width: 200px; text-align: center; text-align-last: center; margin: auto; left: -100px; right: -100px; display: block; cursor: pointer;}
+#slave_slider_4 .carousel-indicators li:nth-child(1):before { content: 'Сервис'; top: -20px;}
+#slave_slider_4 .carousel-indicators li:nth-child(2):before { content: 'Дизайн'; bottom: -20px;}
+#slave_slider_4 .carousel-indicators li:nth-child(3):before { content: 'Инвестиции'; top: -20px;}
 
 
 

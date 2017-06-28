@@ -4,7 +4,7 @@ $(function(){ //плавный скролл к якорям
 	$("a.scrollto").click(function () {
 		var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
-		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 400);
+		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 50}, 900);
 
 		return false;
     });
@@ -14,7 +14,7 @@ $(function(){
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	 	var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
-		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-200}, 400);
+		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-200}, 900);
 
 		return false;
 	})
@@ -28,6 +28,7 @@ $(function(){
 	$('#slave_slider_1').carousel({interval: 4000});
 	$('#slave_slider_2').carousel({interval: 4000});
 	$('#slave_slider_3').carousel({interval: 4000});
+	$('#slave_slider_4').carousel({interval: false});
 
 
 	$('#about').viewportChecker({ 
@@ -102,9 +103,9 @@ $(function(){
          
             $.each(arr, function(i, val) {
                 $this.append(val);
-
             });
-           	bla()
+
+           	bla();
         });
     };
 })(jQuery);
