@@ -11,12 +11,12 @@ $(function(){ //плавный скролл к якорям
 });
 
 $(function(){
-	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	$('a[data-target="#slave_slider_1"]').on('click', function (e) {
 	 	var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
 		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-200}, 900);
 
-		return false;
+		return true;
 	})
 })
 
@@ -31,19 +31,13 @@ $(function(){
 	$('#slave_slider_4').carousel({interval: false});
 
 
-	$('#about').viewportChecker({ 
-		offset: 0,
-		callbackFunction: function(el) {
-			el.removeClass('opacity')
-		}
-	});
-
-	$('.img_txt').viewportChecker({ 
+	$('section.opacity, .contacts_wrap.opacity').viewportChecker({ 
 		offset: 300,
 		callbackFunction: function(el) {
 			el.removeClass('opacity')
 		}
 	});
+
 });
 
 
@@ -65,12 +59,10 @@ function parallax(obj, img1_offset, img2_offset){
 
 	scrolltop += 300;
 
-	
 	obj.find('.concept__img:first-of-type').css({'transform': 'translate3d(0, '+(img1_offset - scrolltop)/8+'px, 0)'});	
 	obj.find('.concept__img:last-of-type').css({'transform': 'translate3d(0, '+(img2_offset - scrolltop)/5+'px, 0)'});	
-	
-		
 }
+
 /* Parallax 2 */
 $(function(){
 	var obj = $('.apartaments_back'),
