@@ -443,13 +443,12 @@ body:after {
 
 
 
-section,
-.contacts_wrap { transition: all 0.7s ease; }
+section { transition: all 0.7s ease; -webkit-transform: translateX(0); transform: translateX(0); }
+section.opacity2:not(.opacity) { transition: all 0.7s ease; -webkit-transform: translateX(0); transform: translateX(0); }
 
 
-
-section.opacity,
-.contacts_wrap.opacity { -webkit-transform: translateX(-1000px); transform: translateX(-1000px);}
+section.opacity { -webkit-transform: translateX(-1500px); transform: translateX(-1500px);}
+section.opacity.opacity2 { -webkit-transform: translateX(1500px); transform: translateX(1500px);}
 
 
 

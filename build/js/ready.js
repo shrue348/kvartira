@@ -31,8 +31,8 @@ $(function(){
 	$('#slave_slider_4').carousel({interval: false});
 
 
-	$('section.opacity, .contacts_wrap.opacity').viewportChecker({ 
-		offset: 300,
+	$('section.opacity').viewportChecker({ 
+		offset: 400,
 		callbackFunction: function(el) {
 			el.removeClass('opacity')
 		}
